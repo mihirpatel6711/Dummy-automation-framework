@@ -14,7 +14,7 @@ import util.ReadExcel;
 
 public class CarInsuranceErrorMessage extends TestBase{
 
-	
+	System.out.println("This is Scenario 1")
     
 }
 

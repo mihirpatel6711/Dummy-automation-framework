@@ -107,6 +107,19 @@ public class CarInsuranceErrorMessage extends TestBase{
         logger.log(Status.PASS, "TestCase Passed");
         logger.log(Status.INFO, "Taking the scrrenshot");
 	}
+	@Test(priority=10)
+    public void screenshottt(){
+        try {
+            car.takescreenshot();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        logger.log(Status.PASS, "TestCase Passed");
+        logger.log(Status.INFO, "Taking the scrrenshot");
+
+
+	
 
 
 

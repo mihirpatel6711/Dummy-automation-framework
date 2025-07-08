@@ -3,7 +3,6 @@ package testcases;
 import java.io.IOException;
 
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -65,7 +64,56 @@ public class CarInsuranceErrorMessage extends TestBase{
 		logger.log(Status.INFO, "Selecting the carmodel");
 
     }
-
+    @Test(priority=6)
+    public void type() {
+        car.cartype();
+        logger.log(Status.PASS, "TestCase Passed");
+        logger.log(Status.INFO, "Selecting the cartype");
+    }
+    @Test(priority=7)
+    public void varient() {
+        car.selectCarVariant();
+        logger.log(Status.PASS, "TestCase Passed");
+        logger.log(Status.INFO, "Selecting the carvarient");
+    }
+    @Test(priority=8)
+    public void year() {
+        car.selectYear();
+        logger.log(Status.PASS, "TestCase Passed");
+        logger.log(Status.INFO, "Selecting the year");
+    }
+    @Test(priority=9)
+    public void filldetails() {
+        ReadExcel re = new ReadExcel();
+        try {
+            car.fillName(re.readexcel(0, filePath, 0));
+            car.fillEmail(re.readexcel(0, filePath, 1));
+            car.fillPhone(re.readexcel(0, filePath, 3));
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        logger.log(Status.PASS, "TestCase Passed");
+        logger.log(Status.INFO, "Filling the details");
+    }
+    @Test(priority=10)
+    public void screenshot(){
+        try {
+            car.takescreenshot();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        logger.log(Status.PASS, "TestCase Passed");
+        logger.log(Status.INFO, "Taking the scrrenshot");
+    }
+   
+    @Test(priority=11)
+    public void close() {
+        car.closebrowser();
+        logger.log(Status.PASS, "TestCase Passed");
+        logger.log(Status.INFO, "Closing the browser");
+    }
 
 
 

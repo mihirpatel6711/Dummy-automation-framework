@@ -61,6 +61,38 @@ public class TravelInsuranceDetails extends TestBase {
         logger.log(Status.PASS, "TestCase Passed");
         logger.log(Status.INFO, "Choosing Start Date");
     }
+
+    @Test(priority=6)
+    public void click() {
+        travel.clickproceed();
+        logger.log(Status.PASS, "TestCase Passed");
+        logger.log(Status.INFO, "Click on freequotes button");
+    }
+    @Test(priority=7)
+    public void fill() throws IOException {
+        travel.filldetails(re.readexcel(0, filePath, 3),"9588003712",re.readexcel(0, filePath, 4));
+        logger.log(Status.PASS, "TestCase Passed");
+        logger.log(Status.INFO, "Filling Details");
+    }
+    @Test(priority=8)
+    public void sort() {
+        travel.sortinsurance();
+        logger.log(Status.PASS, "TestCase Passed");
+        logger.log(Status.INFO, "Sorting the result based on price");
+    }
+    @Test(priority=9)
+    public void productdetails() {
+        travel.getProductDetails();
+        logger.log(Status.PASS, "TestCase Passed");
+        logger.log(Status.INFO, "Products Details");
+    }
+    @Test(priority=10)
+    public void close() {
+        travel.teardown();
+        logger.log(Status.PASS, "TestCase Passed");
+        logger.log(Status.INFO, "Closing test Cases");
+    }
+ 
 	
 }
 

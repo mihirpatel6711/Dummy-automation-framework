@@ -12,6 +12,8 @@ import base.TestBase;
 
 public class HealthInsurancelist extends TestBase{
 
-	
+	public method1(){
+        System.out.println("hello");
+    }
 
 }

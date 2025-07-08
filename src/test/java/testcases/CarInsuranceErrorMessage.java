@@ -106,14 +106,7 @@ public class CarInsuranceErrorMessage extends TestBase{
         }
         logger.log(Status.PASS, "TestCase Passed");
         logger.log(Status.INFO, "Taking the scrrenshot");
-    }
-   
-    @Test(priority=11)
-    public void close() {
-        car.closebrowser();
-        logger.log(Status.PASS, "TestCase Passed");
-        logger.log(Status.INFO, "Closing the browser");
-    }
+	}
 
 
 

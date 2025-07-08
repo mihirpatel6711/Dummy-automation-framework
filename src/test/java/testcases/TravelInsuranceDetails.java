@@ -92,6 +92,20 @@ public class TravelInsuranceDetails extends TestBase {
         logger.log(Status.PASS, "TestCase Passed");
         logger.log(Status.INFO, "Closing test Cases");
     }
+
+     @Test(priority=11)
+    public void close() {
+        travel.teardown();
+        logger.log(Status.PASS, "TestCase Passed");
+        logger.log(Status.INFO, "Closing test Cases");
+    }
+
+     @Test(priority=12)
+    public void close() {
+        travel.teardown();
+        logger.log(Status.PASS, "TestCase Passed");
+        logger.log(Status.INFO, "Closing test Cases");
+    }
  
 	
 }
